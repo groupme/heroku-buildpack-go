@@ -67,6 +67,10 @@ then
     echo -n "       Installing Bazaar..."
     pip install --use-mirrors bzr > /dev/null 2>&1
     echo " done"
+
+    echo -n "       Installing libpq-dev..."
+    gem install pg > /dev/null 2>&1
+    echo " done"
 fi
 
 name=$(cat $build/.godir)
