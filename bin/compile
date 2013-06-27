@@ -51,7 +51,7 @@ fi
 GOROOT=$cache/go-$ver/go export GOROOT
 GOPATH=$build/.heroku/g export GOPATH
 PATH=$GOROOT/bin:$PATH
-
+export CFLAGS="$CFLAGS -I/usr/include/ -I /usr/include/postgresql"
 
 if ! (which hg > /dev/null && which bzr > /dev/null)
 then
@@ -66,10 +66,6 @@ then
 
     echo -n "       Installing Bazaar..."
     pip install --use-mirrors bzr > /dev/null 2>&1
-    echo " done"
-
-    echo -n "       Installing libpq-dev..."
-    gem install pg > /dev/null 2>&1
     echo " done"
 fi
 
