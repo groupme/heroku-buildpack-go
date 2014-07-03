@@ -59,6 +59,8 @@ fi
 file=${GOFILE:-$ver.$(uname|tr A-Z a-z)-amd64$(platext $ver).tar.gz}
 url=${GOURL:-http://go.googlecode.com/files/$file}
 
+echo "[DEBUG] url=$url"
+
 if test -e $build/bin && ! test -d $build/bin
 then
     echo >&2 " !     File bin exists and is not a directory."
