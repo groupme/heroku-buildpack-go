@@ -26,7 +26,7 @@ $ git push heroku master
 ...
 -----> Fetching custom git buildpack... done
 -----> Go app detected
------> Installing Go 1.2.1... done
+-----> Installing Go 1.3.3... done
        Installing Virtualenv... done
        Installing Mercurial... done
        Installing Bazaar... done
