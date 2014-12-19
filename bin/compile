@@ -73,7 +73,7 @@ else
     mkdir -p $cache/$ver
     cd $cache/$ver
     echo -n "-----> Installing $ver..."
-    curl -sLO $url
+    curl -ksLO $url
     tar zxf $file
     rm -f $file
     echo " done"
