@@ -105,6 +105,9 @@ then
     echo " done"
 fi
 
+# Download dependencies
+curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | sudo bash -
+
 p=$GOPATH/src/$name
 mkdir -p $p
 cp -R $build/* $p
