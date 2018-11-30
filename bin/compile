@@ -4,6 +4,7 @@
 set -eo pipefail
 
 echo $"{HOME:=`echo /home/``whoami`}"
+echo $HOME
 
 mkdir -p "$1" "$2"
 build=$(cd "$1/" && pwd)
