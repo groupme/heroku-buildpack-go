@@ -3,7 +3,7 @@
 
 set -eo pipefail
 
-echo $"{HOME:=`echo /home/``whoami`}"
+HOME=`echo /home/``whoami`
 echo $HOME
 
 mkdir -p "$1" "$2"
