@@ -54,6 +54,7 @@ finished() {
 }
 
 determinLocalFileName() {
+    echo "Determining file ${1}"
     local fileName="${1}"
     local localName="jq"
     if [ "${fileName}" != "jq-linux64" ]; then #jq is special cased here because we can't jq until we have jq
@@ -72,6 +73,7 @@ knownFile() {
 }
 
 downloadFile() {
+    echo "Downloading file ${1}"
     local fileName="${1}"
 
     if ! knownFile ${fileName}; then
