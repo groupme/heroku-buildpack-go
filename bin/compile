@@ -456,7 +456,6 @@ case "${TOOL}" in
         go install -v "${FLAGS[@]}" ${pkgs} 2>&1
     ;;
     dep)
-        info "Dep TOOL"
         eval "$(setupGOPATH ${name})"
         depTOML="${src}/Gopkg.toml"
 

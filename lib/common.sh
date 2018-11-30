@@ -32,11 +32,6 @@ TOOL=""
 # Default to $SOURCE_VERSION environment variable: https://devcenter.heroku.com/articles/buildpack-api#bin-compile
 GO_LINKER_VALUE=${SOURCE_VERSION}
 
-
-info() {
-    echo -n "$steptxt $@"
-}
-
 warn() {
     echo -e "${YELLOW} !!    $@${NC}"
 }
@@ -58,7 +53,6 @@ finished() {
 }
 
 determinLocalFileName() {
-    info "Determining file" $1
     local fileName="${1}"
     local localName="jq"
     if [ "${fileName}" != "jq-linux64" ]; then #jq is special cased here because we can't jq until we have jq
@@ -77,7 +71,6 @@ knownFile() {
 }
 
 downloadFile() {
-    info "Downloading file " $1
     local fileName="${1}"
 
     if ! knownFile ${fileName}; then
